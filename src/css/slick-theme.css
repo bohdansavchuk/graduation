@@ -122,7 +122,7 @@
 .slick-dots
 {
     position: absolute;
-    bottom: -25px;
+    bottom: 45px;
 
     display: block;
 
@@ -144,6 +144,7 @@
     height: 20px;
     margin: 0 5px;
     padding: 0;
+    background-color: #ffffff;
 
     cursor: pointer;
 }
@@ -188,7 +189,7 @@
     width: 20px;
     height: 20px;
 
-    content: '•';
+    content: '';
     text-align: center;
 
     opacity: .25;
@@ -201,4 +202,8 @@
 {
     opacity: .75;
     color: black;
+}
+
+li.slick-active {
+    background-color: #ffc800
 }
