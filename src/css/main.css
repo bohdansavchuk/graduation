@@ -1,3 +1,43 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.btn {
+  border: none;
+  background-color: #ffc800;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: blue;
+  color: white;
+}
+
+.section {
+  position: relative;
+}
+
+.section__title {
+  position: absolute;
+  top: -57px;
+  left: 346px;
+  display: inline-block;
+  padding: 20px 67px;
+  background-color: #ffc800;
+  color: #020202;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
 .header {
   background-image: url("../img/header-bg.jpg");
   background-size: 41%;
@@ -156,6 +196,10 @@
   text-transform: uppercase;
 }
 
+.servises {
+  margin-bottom: 143px;
+}
+
 .servises-block {
   background-color: rgba(241, 241, 241, 0.55);
   padding-top: 104px;
@@ -231,43 +275,59 @@
   text-transform: uppercase;
 }
 
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.introduction {
+  padding-top: 95px;
+  padding-bottom: 60px;
+  background-image: url("../img/introduction-bg.jpg");
+  background-size: 58%;
+  background-repeat: repeat-y;
 }
 
-.container {
-  max-width: 1170px;
-  margin: auto;
+.introduction__title {
+  padding: 20px 32px;
 }
 
-.btn {
-  border: none;
-  background-color: #ffc800;
-  outline: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  cursor: pointer;
+.introduction-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.btn:hover {
-  background-color: blue;
-  color: white;
+.introduction-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+  margin-right: 60px;
 }
 
-.section {
-  position: relative;
+.introduction-cards__item {
+  width: 198px;
+  height: 168px;
+  margin-bottom: 36px;
+  text-align: center;
+  background-color: #ffffff;
 }
 
-.section__title {
-  position: absolute;
-  top: -57px;
-  left: 346px;
-  display: inline-block;
-  padding: 20px 67px;
-  background-color: #ffc800;
-  color: #020202;
-  font-size: 28px;
+.introduction-cards__image {
+  margin-top: 16px;
+  max-width: 100%;
+}
+
+.introduction-cards__image:last-child {
+  margin-top: 25px;
+}
+
+.introduction-cards__description {
   text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #020202;
 }
 /*# sourceMappingURL=main.css.map */
