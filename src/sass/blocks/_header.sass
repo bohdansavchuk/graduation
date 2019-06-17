@@ -1,0 +1,65 @@
+.header
+  background-image: url('../img/header-bg.jpg')
+  background-size: 41%
+  background-position: top right
+  background-repeat: repeat-y
+.navbar
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 7px 0
+  &-menu
+    display: flex
+    &__logo
+      margin-right: 135px
+    &__items
+      display: flex
+      align-items: center
+      list-style: none
+      padding: 0
+    &__item
+      margin-right: 55px
+      font-size: 16px
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        top: 4px
+        right: -29px
+        display: inline-block
+        width: 1px
+        height: 12px
+        background-color: $text-color
+        opacity: 0.15
+      &:last-child
+        &:after
+          display: none
+    &__link
+      text-decoration: none
+      color: $text-color
+      outline: none  
+      padding-bottom: 4px
+      transition: 0.2s
+      &:hover
+        color: $primary-color
+        border-bottom: 2px solid $primary-color
+  &-contacts
+    display: flex
+    align-items: center
+    &__phone
+      margin-right: 43px
+    &__icon
+      max-width: 100%
+    &__button
+      padding: 10px 15px
+      font-size: 14px
+      font-weight: 700
+    &__link
+      font-size: 18px
+      font-weight: 700
+      color: $text-color
+      text-decoration: none
+      outline: none
+    &__regular
+      font-weight: 400
