@@ -12,8 +12,8 @@
     display: flex
     justify-content: space-around
     flex-wrap: wrap
-    flex-basis: 65%
-    margin-right: 60px
+    flex-basis: 75%
+    margin-right: 90px
     &__item
       width: 198px
       height: 168px
@@ -31,3 +31,36 @@
       font-weight: 400
       line-height: 23px
       color: $text-color
+  &-list
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    list-style: none
+    padding: 0
+    margin: 0
+    &__item
+      display: flex
+      align-items: flex-start
+    &__text
+      color: $text-color
+      font-size: 20px
+      font-weight: 400
+      line-height: 25px
+    &__number
+      display: inline-block
+      position: relative
+      margin-right: 50px
+      color: $primary-color
+      font-size: 35px
+      font-weight: 700
+      line-height: 25px
+      text-transform: uppercase
+      &:after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 25px
+        width: 31px
+        height: 2px
+        background-color: #000000
+
