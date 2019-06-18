@@ -386,6 +386,7 @@ body {
 
 .feedback {
   background-color: #010101;
+  margin-bottom: 147px;
 }
 
 .feedback-block {
@@ -427,5 +428,88 @@ body {
 .feedback .likes-number {
   display: inline-block;
   margin-right: 29px;
+}
+
+.news {
+  background-color: #f1f1f1;
+  padding-bottom: 98px;
+}
+
+.news__title {
+  padding: 20px 56px;
+}
+
+.news-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 87px;
+  padding-bottom: 70px;
+}
+
+.news-block__image {
+  max-width: 100%;
+  display: block;
+}
+
+.news-block__title {
+  display: inline-block;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 27px;
+  margin-right: 57px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #020202;
+  text-transform: uppercase;
+}
+
+.news-block__title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.news-block__date {
+  font-size: 16px;
+  font-weight: 300;
+  color: #020202;
+  text-transform: uppercase;
+}
+
+.news-block__text {
+  max-width: 324px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #020202;
+  opacity: 0.83;
+}
+
+.news-block__text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.news__btn {
+  display: block;
+  margin: auto;
+  padding: 22px 42px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #020202;
+  text-transform: uppercase;
+}
+
+.news .date__primary {
+  width: 25px;
+  height: 25px;
+  background-color: #ffc800;
+  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */
