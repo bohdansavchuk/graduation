@@ -512,4 +512,67 @@ body {
   background-color: #ffc800;
   font-weight: 400;
 }
+
+.map-block {
+  position: relative;
+}
+
+.map-form {
+  width: 300px;
+  position: absolute;
+  z-index: 10;
+  top: 141px;
+  left: 378px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 51px 47px;
+  text-align: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 4px 1px 9px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 1px 9px 4px rgba(0, 0, 0, 0.5);
+}
+
+.map-form__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.map-form__input {
+  font-style: italic;
+  border: none;
+  border-bottom: 1px solid #020202;
+  margin-bottom: 40px;
+  opacity: 0.7;
+  color: #020202;
+  font-size: 18px;
+  font-weight: 400;
+  outline: none;
+}
+
+.map-form__input:last-of-type {
+  margin-bottom: 60px;
+}
+
+.map-form__button {
+  padding: 22px 57px;
+  color: #020202;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.map .form-title__primary {
+  color: #ffc800;
+}
 /*# sourceMappingURL=main.css.map */
