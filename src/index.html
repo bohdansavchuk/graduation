@@ -14,11 +14,11 @@
   <header class="header">
     <div class="menu">
         <ul class="menu__items">
-          <li class="menu__item"><a class="menu__links" href="#">Услуги</a></li>
-          <li class="menu__item"><a class="menu__links" href="#">Цены</a></li>
-          <li class="menu__item"><a class="menu__links" href="#">Отзывы</a></li>
-          <li class="menu__item"><a class="menu__links" href="#">Новости</a></li>
-          <li class="menu__item"><a class="menu__links" href="#">Контакты</a></li>
+          <li class="menu__item"><a class="menu__links" href="#services">Услуги</a></li>
+          <li class="menu__item"><a class="menu__links" href="#introduction">Цены</a></li>
+          <li class="menu__item"><a class="menu__links" href="#feedback">Отзывы</a></li>
+          <li class="menu__item"><a class="menu__links" href="#news">Новости</a></li>
+          <li class="menu__item"><a class="menu__links" href="#contacts">Контакты</a></li>
         </ul>
     </div>
     <div class="container">
@@ -28,11 +28,11 @@
             <img src="img/logo.png" alt="logo">
           </div>
           <ul class="navbar-menu__items">
-            <li class="navbar-menu__item"><a class="navbar-menu__link" href="#">Услуги</a></li>
-            <li class="navbar-menu__item"><a class="navbar-menu__link" href="#">Цены</a></li>
-            <li class="navbar-menu__item"><a class="navbar-menu__link" href="#">Отзывы</a></li>
-            <li class="navbar-menu__item"><a class="navbar-menu__link" href="#">Новости</a></li>
-            <li class="navbar-menu__item"><a class="navbar-menu__link" href="#">Контакты</a></li>
+            <li class="navbar-menu__item"><a class="navbar-menu__link" href="javascript://0" onclick="slowScroll ('#servises')">Услуги</a></li>
+            <li class="navbar-menu__item"><a class="navbar-menu__link" href="javascript://0" onclick="slowScroll ('#introduction')">Цены</a></li>
+            <li class="navbar-menu__item"><a class="navbar-menu__link" href="javascript://0" onclick="slowScroll ('#feedback')">Отзывы</a></li>
+            <li class="navbar-menu__item"><a class="navbar-menu__link" href="javascript://0" onclick="slowScroll ('#news')">Новости</a></li>
+            <li class="navbar-menu__item"><a class="navbar-menu__link" href="javascript://0" onclick="slowScroll ('#contacts')">Контакты</a></li>
           </ul>
         </div>
         <div class="navbar-contacts">
@@ -109,7 +109,7 @@
         </div>
       </div>
     </section>
-    <section class="section servises">
+    <section class="section servises" id="servises">
       <div class="servises-block">
         <div class="container">
           <h2 class="section__title servises__title">
@@ -144,7 +144,7 @@
         </div>        
       </div>
     </section>
-    <section class="section introduction">
+    <section class="section introduction" id="introduction">
       <h2 class="section__title introduction__title">
         почему мы?
       </h2>
@@ -209,7 +209,7 @@
         </div>
       </div>
     </section>
-    <section class="section feedback">
+    <section class="section feedback" id="feedback">
       <h2 class="section__title feedback__title">
         отзывы
       </h2>
@@ -286,7 +286,7 @@
         </div>
       </div>
     </section>
-    <section class="section news">
+    <section class="section news" id="news">
         <h2 class="section__title news__title">
           новости
         </h2>
@@ -314,7 +314,7 @@
           <button class="btn news__btn">читать все новости</button>
         </div>
     </section>
-    <section class="section map">
+    <section class="section map" id="contacts">
       <div class="map-block">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aac5ebb31943c10a26a6a34384ec628a29a9454a653c31d71ba691be37fca5916&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false"></script>
         <div class="container">
@@ -376,12 +376,26 @@
     $(document).ready(function(){
       var link = $('.menu-link');
       var menu = $('.menu');
+      var nav_link = $('.menu a');
 
       link.click(function(){
         link.toggleClass('menu-link__active');
         menu.toggleClass('menu__active');
       });
+      nav_link.click(function(){
+        link.toggleClass('menu-link__active');
+        menu.toggleClass('menu__active');
+      });
     });
+  </script>
+  <script>
+      function slowScroll (id) {
+        var offset = 0;
+        $('html, body').animate ({
+          scrollTop: $(id).offset ().top - offset
+        }, 1500);
+        return false;
+      }
   </script>
 </body>
 </html>
