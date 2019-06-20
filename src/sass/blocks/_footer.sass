@@ -5,8 +5,19 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+  &-adress
+    display: flex
+    align-items: center
+    &__icon
+      margin-right: 13px
+    &__link
+      font-size: 20px
+      font-weight: 400
+      color: $text-light
+      text-decoration: none
   &-socials
     display: flex
+    align-items: center
     &__icon
       width: 26px
       height: 26px
@@ -20,5 +31,36 @@
       &:hover
         background-color: $primary-color
     &__image
-      max-width: 65% 
+      max-width: 70% 
+    &__insta
+      max-width: 60%
+  &-contacts
+    display: flex
+    align-items: center
+    &__icon
+      margin-right: 10px
+    &__mail
+      position: relative
+      margin-right: 50px
+      font-size: 18px
+      color: $text-light
+      text-decoration: none
+      &:after
+        content: ''
+        position: absolute
+        top: 4px
+        right: -27px
+        display: inline-block
+        width: 1px
+        height: 15px
+        background-color: #ffffff
+        opacity: 0.33
+    &__phone
+      font-size: 18px
+      font-weight: 700
+      color: $text-light
+      text-decoration: none
+      text-transform: uppercase
+    &__regular
+      font-weight: 400
      
