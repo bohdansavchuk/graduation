@@ -48,7 +48,7 @@
       </div>
     </div>
   </header>
-  <!-- <main>
+  <main>
     <section class="section hero">
       <div class="hero-slider">
         <div class="hero-slide">
@@ -316,7 +316,7 @@
     </section>
     <section class="section map" id="contacts">
       <div class="map-block">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aac5ebb31943c10a26a6a34384ec628a29a9454a653c31d71ba691be37fca5916&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false"></script>
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aac5ebb31943c10a26a6a34384ec628a29a9454a653c31d71ba691be37fca5916&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=афдыу"></script>
         <div class="container">
           <form action="#" class="map-form">
             <h3 class="map-form__title">оставьте<span class="form-title__primary"> заявку</span></h3>
@@ -348,7 +348,7 @@
         </div>
       </div>
     </div>
-  </footer>   -->
+  </footer>  
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -357,10 +357,12 @@
   <script>
     $(document).ready(function(){
       $('.hero-slider').slick({
-        speed: 800,
+        speed: 1500,
         infinite: true,
         arrows: false,
-        dots: true
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000
       });
     });
     $(document).ready(function(){
@@ -370,7 +372,16 @@
         slidesToScroll: 2,
         infinite: true,
         arrows: false,
-        dots: true
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       });
     });
     $(document).ready(function(){

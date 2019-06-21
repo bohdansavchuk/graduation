@@ -1,16 +1,42 @@
+@media (max-width: 1550px)
+  .map
+    &-form
+      top: 20%
+      left: 10%
+
 @media (max-width: 1200px)
   .container
     max-width: 992px
+  .section
+    &__title
+      left: 10%
   .header
     background-size: 39%
   .navbar
     &-menu
       &__logo
         margin-right: 50px
+  .servises
+    &-variants
+      justify-content: space-around
+  .news
+    &-block
+      justify-content: space-around
+      &__item
+        margin-bottom: 35px
+  .map
+    &-form
+      width: 270px
+      &__button
+        font-size: 15px
+  
 
 @media (max-width: 991px)
   .container
     max-width: 85%
+  .section
+    &__title
+      font-size: 23px
   .header
     background-size: 100%
   .navbar
@@ -27,7 +53,88 @@
   .menu
     &-link
       display: block
+  .hero
+    &-slide
+      &__title
+        margin-top: 190px
+        font-size: 30px
+      &__subtitle
+        font-size: 30px
+      &__button
+        font-size: 15px
+  .footer
+    &-adress
+      margin-bottom: 10px
 
-  @media (max-width: 768px)
-    .container
-      max-width: 80%
+@media (max-width: 886px)
+  .introduction
+    background-size: 100%
+    &-block
+      flex-direction: column  
+    &-cards
+      margin-right: 0
+      margin-bottom: 20px
+    &-list
+      &__item
+        margin-bottom: 25px
+
+@media (max-width: 768px)
+  .container
+    max-width: 80%
+  .hero
+    &-slide
+      &__title
+        font-size: 26px
+      &__subtitle
+        font-size: 26px
+        margin-bottom: 25px
+      &__description
+        font-size: 16px
+        margin-bottom: 25px
+  .menu
+    &__links
+      font-size: 20px
+  .news
+    &-block
+      padding-bottom: 40px
+    &__btn
+      font-size: 18px
+  .map
+    &-block
+      display: flex
+      flex-direction: column-reverse
+    &-form
+      width: 350px
+      max-width: 100%
+      margin: auto
+      position: relative
+      top: 0
+      left: 0
+      padding: 51px 0
+      box-shadow: none
+      &__button
+        font-size: 15px
+  .footer
+    &-adress
+      margin-bottom: 10px
+      &__link
+        font-size: 15px
+    &-socials
+      margin-bottom: 10px
+    &-contacts
+      &__mail
+        font-size: 15px
+      &__phone
+        font-size: 15px
+
+@media (max-width: 500px)
+  .hero
+    &-slide
+      &__title
+        font-size: 20px
+        margin-top: 50px
+      &__subtitle
+        font-size: 20px
+      &__description
+        font-size: 16px
+        line-height: 1
