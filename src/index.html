@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/main.css">
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(54162469, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54162469" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </head>
 <body>
   <header class="header">
@@ -41,7 +42,7 @@
             <img class="navbar-contacts__icon" src="img/phone-receiver.png" alt="phone">
             <a class="navbar-contacts__link" href="tel:+7(863)342-22-21"><span class="navbar-contacts__regular">+7 (863)</span> 342-22-21</a>
           </div>
-          <button class="btn navbar-contacts__button" id="button">Заказать звонок</button>
+          <button class="btn navbar-contacts__button" type="button" onclick="ym(54162469, 'reachGoal', 'button'); return true;" id="button">Заказать звонок</button>
           <a href="#" class="menu-link">
             <span class="menu-link__line"></span>
           </a>
@@ -319,11 +320,11 @@
       <div class="map-block">
           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aac5ebb31943c10a26a6a34384ec628a29a9454a653c31d71ba691be37fca5916&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=афдыу"></script>
         <div class="container">
-          <form action="#" class="map-form wow fadeInLeft" data-wow-offset="100" data-wow-duration="1.5s">
+          <form action="#" method="get" onsubmit="ym(54162469, 'reachGoal', 'form'); return true;" class="map-form wow fadeInLeft" id="contacts-form" data-wow-offset="100" data-wow-duration="1.5s">
             <h3 class="map-form__title">оставьте<span class="form-title__primary"> заявку</span></h3>
-            <input type="text" class="map-form__input" placeholder="Введите Ваше имя">
-            <input type="text" class="map-form__input" placeholder="Введите Ваш номер телефона">
-            <button class="btn map-form__button" id="button-modal">заказать звонок</button>
+            <input type="text" name="username" class="map-form__input" placeholder="Введите Ваше имя">
+            <input type="tel" name="phone" class="map-form__input phone" placeholder="Введите Ваш номер телефона">
+            <button type="submit" class="btn map-form__button" id="button-modal">заказать звонок</button>
           </form>
         </div>
       </div>
@@ -373,9 +374,33 @@
   <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script>
     $(document).ready(function(){
       new WOW().init();
+      $('#contacts-form').validate({
+        rules: {
+          username: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          phone: "required"
+        },
+        messages: {
+          username: {
+            required: "Заполните поле",
+            minlength: jQuery.validator.format("Минимальное количество символов {0}"),
+            maxlength: jQuery.validator.format("Максимальное количество символов {0}")
+          },
+          phone: "Заполните поле"
+        },
+        errorClass: "invalid",
+        focusInvalid: false,
+        focusCleanup: true
+      });
+      $('.phone').mask('8 (999) 999-99-99');
       $('.hero-slider').slick({
         speed: 1500,
         infinite: true,

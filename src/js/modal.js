@@ -12,16 +12,16 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(){
-  var button = $('#button-modal');
-  var modal = $('#success');
-  var close = $('#close-success');
+// $(document).ready(function(){
+//   var button = $('#button-modal');
+//   var modal = $('#success');
+//   var close = $('#close-success');
 
-  button.on('click', function(){
-    modal.addClass('success_active');
-  });
+//   button.on('click', function(){
+//     modal.addClass('success_active');
+//   });
 
-  close.on('click', function(){
-    modal.removeClass('success_active');
-  });
-});
+//   close.on('click', function(){
+//     modal.removeClass('success_active');
+//   });
+// });
