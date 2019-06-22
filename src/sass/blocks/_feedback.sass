@@ -1,6 +1,9 @@
 .feedback
   background-color: $black-bg
   margin-bottom: 147px
+  &__title
+    top: -50px
+    padding: 15px 64px
   &-block
     color: $text-light
   &-slider
@@ -9,24 +12,30 @@
       text-align: center
       outline: none
     &__title
-      margin-top: 19px
+      margin: 0
+      margin-top: 3px
+      margin-bottom: 19px
       color: $primary-color
       font-size: 20px
       font-weight: 400
       line-height: 28px
     &__text
       display: inline-block
-      max-width: 465px
-      margin-bottom: 28px
-      font-size: 20px
+      max-width: 500px
+      margin-bottom: 25px
+      font-size: 19px
       font-weight: 400
       line-height: 28px
       letter-spacing: 0.4px
     &__likes
-      margin-bottom: 104px
+      margin-bottom: 162px
   .likes
-    &-icon
-      margin-right: 7px
     &-number
       display: inline-block
-      margin-right: 29px
+      font-size: 15px
+  .dislikes
+    &-icon
+      margin-left: 25px
+.container-feedback
+  max-width: 1399px
+  margin: auto

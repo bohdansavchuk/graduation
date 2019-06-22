@@ -1,32 +1,32 @@
 .introduction
   padding-top: 95px
-  padding-bottom: 60px
+  padding-bottom: 55px
   margin-bottom: 143px
   background-image: url('../img/introduction-bg.jpg')
-  background-size: 58%
+  background-size: 57%
   background-repeat: repeat-y
   &__title
-    padding: 20px 32px
+    padding: 15px 30px
   &-block
     display: flex
   &-cards
     display: flex
-    justify-content: space-around
+    justify-content: space-between
     flex-wrap: wrap
-    flex-basis: 75%
+    flex-basis: 73%
     margin-right: 90px
     &__item
       width: 198px
       height: 168px
-      margin-bottom: 36px
+      margin-bottom: 38px
       text-align: center
       background-color: #ffffff 
     &__image
-      margin-top: 16px
+      margin-top: 17px
+      margin-bottom: 10px
       max-width: 100%
-      &:last-child
-        margin-top: 25px
     &__description
+      margin: 0
       text-transform: uppercase
       font-size: 18px
       line-height: 23px
@@ -34,7 +34,7 @@
   &-list
     display: flex
     flex-direction: column
-    justify-content: space-around
+    justify-content: space-between
     list-style: none
     padding: 0
     margin: 0
@@ -43,12 +43,13 @@
       align-items: flex-start
     &__text
       color: $text-color
-      font-size: 20px
+      font-size: 19px
       line-height: 25px
     &__number
       display: inline-block
       position: relative
-      margin-right: 50px
+      margin-right: 75px
+      margin-bottom: 40px
       color: $primary-color
       font-size: 35px
       +bold
@@ -58,7 +59,7 @@
         content: ''
         position: absolute
         top: 50%
-        left: 25px
+        left: 40px
         width: 31px
         height: 2px
         background-color: #000000
