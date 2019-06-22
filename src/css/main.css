@@ -390,6 +390,15 @@ input.invalid {
   height: 236px;
   margin-bottom: 21px;
   text-align: center;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.servises-variants__item1:hover, .servises-variants__item2:hover, .servises-variants__item3:hover, .servises-variants__item4:hover, .servises-variants__item5:hover, .servises-variants__item6:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 
 .servises-variants__item1 {
@@ -424,12 +433,31 @@ input.invalid {
   line-height: 26px;
 }
 
+.servises-variants__price {
+  display: none;
+  width: 100px;
+}
+
 .servises-variants__button {
   padding: 7px 20px;
   color: #020202;
   font-size: 15px;
   font-family: 'Proxima Nova Lt', sans-serif;
   text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.servises-variants__button:hover {
+  background-color: #020202;
+}
+
+.servises-variants__button:hover .servises-variants__price {
+  display: block;
+}
+
+.servises-variants__button:hover .servises-variants__description {
+  display: none;
 }
 
 .introduction {

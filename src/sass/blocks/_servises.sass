@@ -16,6 +16,10 @@
       height: 236px
       margin-bottom: 21px
       text-align: center
+      filter: grayscale(100%)
+      transition: all 0.3s
+      &:hover
+        filter: none
     &__item1
       background-image: url('../img/servises-bg1.jpg')
     &__item2
@@ -34,11 +38,24 @@
       color: #fcfafa
       font-size: 20px
       line-height: 26px
+    &__price
+      display: none
+      width: 100px
     &__button
       padding: 7px 20px
       color: $text-color
       font-size: 15px
       +bold
       text-transform: uppercase
+      transition: all 0.5s
+      &:hover
+        background-color: $text-color
+        .servises
+          &-variants
+            &__price
+              display: block
+            &__description
+              display: none
+
 
 
